@@ -1,0 +1,112 @@
+{
+  "student_info": {
+    "name": "",
+    "student_id": "",
+    "department": "",
+    "semester": ""
+  },
+  "entries": [
+    {
+      "day": "Monday",
+      "start_time": "10:00",
+      "end_time": "11:00",
+      "course_code": "500-L302",
+      "course_title": "수학 1"
+    },
+    {
+      "day": "Monday",
+      "start_time": "11:00",
+      "end_time": "12:00",
+      "course_code": "26-B101",
+      "course_title": "물리학 1"
+    },
+    {
+      "day": "Monday",
+      "start_time": "13:00",
+      "end_time": "14:00",
+      "course_code": "301-118",
+      "course_title": "컴퓨터의 개념 및 실습"
+    },
+    {
+      "day": "Monday",
+      "start_time": "18:00",
+      "end_time": "20:00",
+      "course_code": "301-118",
+      "course_title": "컴퓨터의 개념 및 실습"
+    },
+    {
+      "day": "Tuesday",
+      "start_time": "12:00",
+      "end_time": "13:00",
+      "course_code": "1-210",
+      "course_title": "초급중국어 1"
+    },
+    {
+      "day": "Tuesday",
+      "start_time": "15:00",
+      "end_time": "16:00",
+      "course_code": "1-203",
+      "course_title": "미국문화와 현대사회의 이해"
+    },
+    {
+      "day": "Wednesday",
+      "start_time": "10:00",
+      "end_time": "11:00",
+      "course_code": "500-L302",
+      "course_title": "수학 1"
+    },
+    {
+      "day": "Wednesday",
+      "start_time": "11:00",
+      "end_time": "12:00",
+      "course_code": "26-B101",
+      "course_title": "물리학 1"
+    },
+    {
+      "day": "Wednesday",
+      "start_time": "14:00",
+      "end_time": "15:00",
+      "course_code": "26-304",
+      "course_title": "물리학실험 1"
+    },
+    {
+      "day": "Thursday",
+      "start_time": "12:00",
+      "end_time": "13:00",
+      "course_code": "1-210",
+      "course_title": "초급중국어 1"
+    },
+    {
+      "day": "Thursday",
+      "start_time": "16:00",
+      "end_time": "17:00",
+      "course_code": "1-203",
+      "course_title": "미국문화와 현대사회의 이해"
+    },
+    {
+      "day": "Thursday",
+      "start_time": "17:00",
+      "end_time": "18:00",
+      "course_code": "3-115",
+      "course_title": "초급중국어 1"
+    },
+    {
+      "day": "Friday",
+      "start_time": "09:00",
+      "end_time": "12:00",
+      "course_code": "1-102",
+      "course_title": "대학 글쓰기 1"
+    },
+    {
+      "day": "Friday",
+      "start_time": "15:00",
+      "end_time": "16:00",
+      "course_code": "500-L303",
+      "course_title": "수학연습 1"
+    }
+  ],
+  "meta": {
+    "source": "chatgpt-vision",
+    "polished_at_utc": "2026-06-01T05:39:04.232463+00:00"
+  }
+}
