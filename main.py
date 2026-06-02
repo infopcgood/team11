@@ -6,6 +6,7 @@ import sys
 
 from dotenv import load_dotenv
 
+from src.get_gonggangs import get_gonggangs
 from src.import_timetable import timetable_from_screenshot
 
 
@@ -40,11 +41,15 @@ def main() -> int:
 			api_key=args.api_key,
 			model=args.model,
 		)
+		gonggangs = get_gonggangs(timetable)
 	except Exception as exc:
 		print(f"Error: {exc}", file=sys.stderr)
 		return 1
 
-	print(json.dumps(timetable, ensure_ascii=False, indent=2))
+	output = {
+		"gonggangs": [item.to_dict() for item in gonggangs],
+	}
+	print(json.dumps(output, ensure_ascii=False, indent=2))
 	return 0
 
 
