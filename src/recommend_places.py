@@ -18,6 +18,7 @@ CATEGORY_COLUMNS = {
     "공부": "study",
     "밥": "meal",
     "식사": "meal",
+    "운동": "exercise",
     "meal": "meal",
     "study": "study",
     "rest": "rest",
