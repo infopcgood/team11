@@ -21,6 +21,7 @@ CATEGORY_COLUMNS = {
     "meal": "meal",
     "study": "study",
     "rest": "rest",
+    "exercise": "exercise",
 }
 
 
@@ -31,6 +32,7 @@ class Place:
     rest: int
     study: int
     meal: int
+    exercise: int
     open_time: str
 
     def score_for(self, category: str) -> int:
@@ -41,6 +43,8 @@ class Place:
             return self.study
         if column == "meal":
             return self.meal
+        if column == "exercise":
+            return self.exercise
         return 0
 
 
@@ -63,6 +67,7 @@ def load_places() -> list[Place]:
                     rest=int(row["rest"] or 0),
                     study=int(row["study"] or 0),
                     meal=int(row["meal"] or 0),
+                    exercise=int(row["exercise"] or 0),
                     open_time=str(row.get("open_time", "")).strip(),
                 )
             )
