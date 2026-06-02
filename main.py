@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 
 from src.get_gonggangs import get_gonggangs
 from src.import_timetable import timetable_from_screenshot
-
+from src.recommend_places import recommend_places
 
 load_dotenv()
 
@@ -19,6 +19,10 @@ def build_parser() -> argparse.ArgumentParser:
 	)
 	parser.add_argument("image", help="Path to timetable screenshot image (png/jpg/jpeg/webp)")
 	parser.add_argument(
+			"--category",
+		default="공부",
+		help="Activity category: 공부, 휴식, 밥",
+	)
 		"--model",
 		default="gpt-4.1-mini",
 		help="OpenAI model name (default: gpt-4.1-mini)",
@@ -42,12 +46,15 @@ def main() -> int:
 			model=args.model,
 		)
 		gonggangs = get_gonggangs(timetable)
+		recommendations = recommend_places(gonggangs, args.category)
+		
 	except Exception as exc:
 		print(f"Error: {exc}", file=sys.stderr)
 		return 1
 
 	output = {
 		"gonggangs": [item.to_dict() for item in gonggangs],
+		'recommendations": recommendations,
 	}
 	print(json.dumps(output, ensure_ascii=False, indent=2))
 	return 0
